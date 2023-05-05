@@ -7,6 +7,7 @@ export const NavigationProvider = ({ children }) => {
     initialRouteName: 'home',
     screens: {
       'home': '',
+      'nomad': 'nomada-digital/'
     },
   }
   const linking = {

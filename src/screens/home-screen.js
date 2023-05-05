@@ -3,29 +3,33 @@ import React from 'react'
 import { ScreenWrapper } from '../components/screen-wrapper'
 import { TopNavigationBar } from '../components/navigation-bar'
 import { Hoverable } from 'react-native-web-hooks'
+import { Link } from '../components/link'
 
-const ActionItem = (props) => {
-  // TODO: Hoverable
-  const { label, icon, callToAction, ...rest } = props
+
+const Item = (props) => {
+  const { label, icon, screen, ...rest } = props
   
   return (
     <Hoverable>
       {isHovered => (
-        <View className={`rounded-lg p-8 items-center justify-center space-y-4 ${isHovered && 'bg-gray-100'}`}>
+        <Link to={{ screen: screen }} className={`rounded-lg p-8 items-center justify-center space-y-4 ${isHovered && 'bg-gray-100'}`}>
           <Image className={`w-24 h-24 ${isHovered && 'scale-105'}`} source={require(`../../assets/img/${icon}.png`)} />
-          <Text className={`text-xl font-semibold ${isHovered ? 'text-gray-900' : 'text-gray-900'}`}>{label}</Text>
-        </View>
+          <Text className={`text-xl font-semibold text-center ${isHovered ? 'text-gray-900' : 'text-gray-900'}`}>{label}</Text>
+        </Link>
       )}
     </Hoverable>
   )
 }
 
-const ActionPanel = () => {
+const Panel = () => {
   return (
-    <View className="mx-auto w-full h-full max-h-96 max-w-2xl lg:max-w-7xl p-4 sm:px-12 sm:py-24 my-8 sm:my-48 flex-row items-center justify-evenly border border-gray-200 rounded-lg">
-      <ActionItem label="Soy nómada digital" icon="nomada-digital" callToAction={undefined} />
-      <ActionItem label="Soy turista rural" icon="turista-rural" callToAction={undefined} />
-      <ActionItem label="Soy un joven fiestero" icon="joven-fiestero" callToAction={undefined} />
+    <View className="mx-auto w-full lg:max-w-7xl my-8 sm:my-48">
+      <Text className="text-3xl font-semibold pb-4">¿Tu quién eres?</Text>
+      <View className="p-4 sm:px-12 sm:py-24 border border-gray-200 rounded-lg flex sm:flex-row items-center justify-evenly">
+        <Item label="Soy nómada digital" icon="nomada-digital" screen="nomad" />
+        <Item label="Soy turista rural" icon="turista-rural" screen={undefined} />
+        <Item label="Soy un joven fiestero" icon="joven-fiestero" screen={undefined} />
+      </View>
     </View>
   )
 }
@@ -35,8 +39,8 @@ const HomeScreen = () => {
     <ScreenWrapper styleName={{ View: 'bg-white' }}>
       <TopNavigationBar />
 
-      <ScrollView className="py-4">
-        <ActionPanel />
+      <ScrollView className="p-4">
+        <Panel />
       </ScrollView>
       
     </ScreenWrapper>
