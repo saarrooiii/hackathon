@@ -29,6 +29,7 @@ const Panel = () => {
         <Item label="Soy un nómada digital" icon="nomada-digital" screen="nomad" />
         <Item label="Soy un turista rural" icon="turista-rural" screen="tourist" />
         <Item label="Soy un joven fiestero" icon="joven-fiestero" screen="party-boy" />
+        <Item label="No lo sé" icon="otro" screen="other" />
       </View>
     </View>
   )

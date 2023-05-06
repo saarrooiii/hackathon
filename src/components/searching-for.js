@@ -73,7 +73,7 @@ const Panel = (props) => {
         <SelectableItem items={items} setItems={setItems} label="Animales" item="animales" />
       </View>
       <View className="flex-row items-center justify-end pt-6">
-        <Button className="rounded-full" labelStyle={{ fontWeight: 500, fontSize: 24 }} contentStyle={{ flexDirection: 'row-reverse', padding: '12px' }} icon="arrow-right" mode="contained" onPress={() => {navigation.navigate('map-list', { requirements: requirements } )}}>Buscar</Button>
+        <Button className="rounded-full" labelStyle={{ fontWeight: 500, fontSize: 24 }} contentStyle={{ flexDirection: 'row-reverse', padding: '12px' }} icon="arrow-right" mode="contained" onPress={() => {navigation.navigate('map-list')}}>Buscar</Button>
       </View>
     </View>
   )

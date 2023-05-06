@@ -10,8 +10,9 @@ export const NavigationProvider = ({ children }) => {
       'nomad': 'nomada-digital/',
       'tourist': 'turista-rural/',
       'party-boy': 'joven-fiestero/',
-      'map-list': 'mapa/:requirements?',
-      'map-detail': 'map/:comarca',
+      'other': 'otro/',
+      'map-list': 'mapa/',
+      'comarca-detail': 'comarcas/:comarca',
     },
   }
   const linking = {
