@@ -75,7 +75,7 @@ const ComarcaList = (props) => {
       <View className="space-y-2">
         <Text className="text-3xl font-semibold text-gray-900">
           {/* Abre tu mente. Hay vida más allá de la ciudad. */}
-          Comarcas para tí
+          Comarcas recomendaas para tí
         </Text>
         {/*
         <Text className="text-xl font-semibold text-gray-500">
