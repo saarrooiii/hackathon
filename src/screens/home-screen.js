@@ -12,7 +12,7 @@ const Item = (props) => {
   return (
     <Hoverable>
       {isHovered => (
-        <Link to={{ screen: screen }} className={`rounded-lg p-8 items-center justify-center space-y-4 ${isHovered && 'bg-gray-100'}`}>
+        <Link to={{ screen: screen }} className={`rounded-lg m-4 p-8 items-center justify-center space-y-4 ${isHovered && 'bg-gray-100'}`}>
           <Image className={`w-24 h-24 ${isHovered && 'scale-105'}`} source={require(`../../assets/img/${icon}.png`)} />
           <Text className={`text-xl font-semibold text-center ${isHovered ? 'text-gray-900' : 'text-gray-900'}`}>{label}</Text>
         </Link>
@@ -25,10 +25,10 @@ const Panel = () => {
   return (
     <View className="mx-auto w-full lg:max-w-7xl my-8 sm:my-48">
       <Text className="text-3xl font-semibold pb-4">¿Tu quién eres?</Text>
-      <View className="p-4 sm:px-12 sm:py-24 border border-gray-200 rounded-lg flex sm:flex-row items-center justify-evenly">
-        <Item label="Soy nómada digital" icon="nomada-digital" screen="nomad" />
-        <Item label="Soy turista rural" icon="turista-rural" screen={undefined} />
-        <Item label="Soy un joven fiestero" icon="joven-fiestero" screen={undefined} />
+      <View className="p-4 sm:px-12 sm:py-24 border border-gray-200 rounded-lg flex sm:flex-row items-center justify-evenly flex-wrap">
+        <Item label="Soy un nómada digital" icon="nomada-digital" screen="nomad" />
+        <Item label="Soy un turista rural" icon="turista-rural" screen="tourist" />
+        <Item label="Soy un joven fiestero" icon="joven-fiestero" screen="party-boy" />
       </View>
     </View>
   )

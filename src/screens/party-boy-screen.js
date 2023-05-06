@@ -1,16 +1,16 @@
 import React from 'react'
 import { SearchingForScreenComponent } from '../components/searching-for'
 
-const NomadScreen = () => {
+const PartyBoyScreen = () => {
   return (
     <SearchingForScreenComponent 
       selected={[
-        'salud',
-        'paisajes',
-        'wifi',
+        'fiestas-de-pueblo',
+        'eventos-culturales',
+        'gastronomia',
       ]}
     />
   )
 }
 
-export default NomadScreen
+export default PartyBoyScreen

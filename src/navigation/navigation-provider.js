@@ -7,7 +7,9 @@ export const NavigationProvider = ({ children }) => {
     initialRouteName: 'home',
     screens: {
       'home': '',
-      'nomad': 'nomada-digital/'
+      'nomad': 'nomada-digital/',
+      'tourist': 'turista-rural/',
+      'party-boy': 'joven-fiestero/',
     },
   }
   const linking = {
