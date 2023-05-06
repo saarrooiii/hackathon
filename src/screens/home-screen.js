@@ -11,7 +11,7 @@ const Item = (props) => {
   return (
     <Hoverable>
       {isHovered => (
-        <Link to={{ screen: screen }} className={`rounded-lg m-4 p-8 items-center justify-center space-y-4 ${isHovered && 'bg-gray-100'}`}>
+        <Link to={{ screen: screen }} className={`rounded-lg m-4 p-8 items-center justify-center space-y-4 ${isHovered && 'bg-gray-100'} `}>
           <Image className={`w-24 h-24 ${isHovered && 'scale-105'}`} source={require(`../../assets/img/${icon}.png`)} />
           <Text className={`text-xl font-semibold text-center ${isHovered ? 'text-gray-900' : 'text-gray-900'}`}>{label}</Text>
         </Link>

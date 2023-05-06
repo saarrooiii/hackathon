@@ -10,9 +10,8 @@ const AIPanel = () => {
     <View className="mx-auto w-full lg:max-w-7xl my-8 sm:my-24">{/* sm:my-48 */}
       <View className="flex-row w-full items-center justify-between pb-4">
         <Text className="text-3xl font-semibold">Explícale a nuestra IA qué estás buscando</Text>
-        <Button className="rounded-full" icon="magnify" mode="contained" onPress={() => {navigation.navigate('map-list')}}>Buscar</Button>
       </View>
-      <TextInput theme={{ colors: { primary: gray900} }} label="Yo estoy buscando..." mode="outlined" multiline="true" numberOfLines={5} />
+      <TextInput theme={{ colors: { primary: gray900} }} label="Yo estoy buscando..." mode="outlined" />
     </View>
   )
 }
