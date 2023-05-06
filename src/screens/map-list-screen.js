@@ -15,7 +15,7 @@ const PinMapa = (props) => {
   return (
     <Hoverable onHoverIn={() => {setHover(id)}} onHoverOut={removeHover}>
       {isHovered => (
-        <Link to={{ screen: "comarca-detail", params: { comarca: "1" } }} className={`w-12 h-12 ${isHovered && 'scale-110' } ${hover === id && 'scale-110'} `}>
+        <Link to={{ screen: 'comarca-detail', params: { id: id } }} className={`w-12 h-12 ${isHovered && 'scale-110' } ${hover === id && 'scale-110'} `}>
           <Image
             className="w-full h-full object-cover rounded-xl"
             source={require('../../assets/img/pin-mapa.png')}
@@ -56,7 +56,7 @@ const ComarcaItem = (props) => {
     <View className="my-1">
       <Hoverable onHoverIn={() => {setHover(comarca.id)}} onHoverOut={removeHover}>
         {isHovered => (
-          <Link to={{ screen: '' }} className={`w-48 h-48 m-8 p-2 rounded-lg items-center justify-center space-y-6 ${isHovered && 'bg-gray-100'} ${hover === comarca.id && 'bg-gray-100'} `}>
+          <Link to={{ screen: 'comarca-detail', params: { id: comarca.id} }} className={`w-48 h-48 m-8 p-2 rounded-lg items-center justify-center space-y-6 ${isHovered && 'bg-gray-100'} ${hover === comarca.id && 'bg-gray-100'} `}>
             <Image className={`w-12 h-12 ${isHovered && 'scale-105'}`} source={require(`../../assets/img/${comarca.image}.png`)} />
             <Text className="text-xl font-semibold text-center text-gray-900">Comarca {comarca.label}</Text>
           </Link>
@@ -98,7 +98,7 @@ const MapListScreen = () => {
 
   useEffect(() => {
     const fetchComarcas = () => {
-      const _comarcas = mockComarcas.filter(comarca => Math.random() < 0.6)
+      const _comarcas = mockComarcas.filter(comarca => Math.random() < 0.66)
       setComarcas(_comarcas)
     }
 

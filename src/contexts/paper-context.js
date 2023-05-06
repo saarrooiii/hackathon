@@ -1,6 +1,6 @@
 import React from 'react'
 import { MD3LightTheme as DefaultTheme, Provider } from 'react-native-paper'
-import { blue200, green50, blue500, green600, green900, gray400, gray50, gray600, gray900, red50, red600, red900, white, green500 } from '../constants/colors'
+import { blue200, green50, blue500, green600, green900, gray400, gray50, gray600, gray900, red50, red600, red900, white, green500, gray200 } from '../constants/colors'
 
 const theme = {
   ...DefaultTheme,

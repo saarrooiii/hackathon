@@ -12,7 +12,7 @@ export const NavigationProvider = ({ children }) => {
       'party-boy': 'joven-fiestero/',
       'other': 'otro/',
       'map-list': 'mapa/',
-      'comarca-detail': 'comarcas/:comarca',
+      'comarca-detail': 'comarcas/:id',
     },
   }
   const linking = {

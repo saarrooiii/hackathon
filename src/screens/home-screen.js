@@ -5,7 +5,6 @@ import { TopNavigationBar } from '../components/navigation-bar'
 import { Hoverable } from 'react-native-web-hooks'
 import { Link } from '../components/link'
 
-
 const Item = (props) => {
   const { label, icon, screen, ...rest } = props
   
@@ -23,7 +22,7 @@ const Item = (props) => {
 
 const Panel = () => {
   return (
-    <View className="mx-auto w-full lg:max-w-7xl my-8 sm:my-48">
+    <View className="mx-auto w-full lg:max-w-7xl my-8 sm:my-48">{/* sm:my-48 */}
       <Text className="text-3xl font-semibold pb-4">¿Tu quién eres?</Text>
       <View className="p-4 sm:px-12 sm:py-24 border border-gray-200 rounded-lg flex sm:flex-row items-center justify-evenly flex-wrap">
         <Item label="Soy un nómada digital" icon="nomada-digital" screen="nomad" />
