@@ -1,5 +1,5 @@
 # Comarca
-Este repositorio contiene todo el código que hemos desarrollado durante este hackathon para crear el producto la aplicación `comarca`, la cual actualmente se encuentre en fase de `MVP` y está publicada en forma de página web en el link que se indica en este repositorio. A demás, hemos incluido la `presentación` del proyecto en formato PDF.
+Este repositorio contiene todo el código que hemos desarrollado durante este hackathon para crear el producto la aplicación `Comarca`, la cual actualmente se encuentre en fase de `MVP` y está publicada en forma de página web en el link que se indica en este repositorio. A demás, hemos incluido la `presentación` del proyecto en formato PDF.
 
 ## Inspiration
 La inspiración detrás de nuestro proyecto radica en nuestra pasión por explorar, la necesidad de optimizar la experiencia del viaje por cualquier razón a zonas rurales y la motivación por contribuir al bien social mediante el apoyo a las zonas rurales y la reducción de la brecha entre las ciudades y los pueblos.
