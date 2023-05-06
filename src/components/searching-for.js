@@ -1,9 +1,10 @@
 import { View, Text, ScrollView, Image, Pressable } from 'react-native'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { ScreenWrapper } from '../components/screen-wrapper'
 import { Hoverable } from 'react-native-web-hooks'
 import { TopNavigationBar } from './navigation-bar'
 import { Button } from 'react-native-paper'
+import { useNavigation } from '@react-navigation/native'
 
 const SelectableItem = (props) => {
   const { label, item, items, setItems, ...rest } = props
@@ -34,6 +35,29 @@ const SelectableItem = (props) => {
 const Panel = (props) => {
   const { selected } = props
   const [items, setItems] = useState(selected || [])
+  const [requirements, setRequirements] = useState('')
+
+  const updateRequirements = () => {
+    if (items) {
+      let _requirements = ''
+      for (const item of items) {
+        _requirements += `${item} `
+      }
+      setRequirements(_requirements)
+    } else {
+      setRequirements('')
+    }
+  }
+
+  useEffect(() => {
+    updateRequirements()
+  })
+
+  useEffect(() => {
+    updateRequirements()
+  }, [items])
+
+  const navigation = useNavigation()
 
   return (
     <View className="mx-auto w-full lg:max-w-7xl my-8 sm:my-24">
@@ -49,7 +73,7 @@ const Panel = (props) => {
         <SelectableItem items={items} setItems={setItems} label="Animales" item="animales" />
       </View>
       <View className="flex-row items-center justify-end pt-6">
-        <Button className="rounded-full" labelStyle={{ fontWeight: 500, fontSize: 24 }} contentStyle={{ flexDirection: 'row-reverse', padding: '12px' }} icon="arrow-right" mode="contained" onPress={() => {}}>Buscar</Button>
+        <Button className="rounded-full" labelStyle={{ fontWeight: 500, fontSize: 24 }} contentStyle={{ flexDirection: 'row-reverse', padding: '12px' }} icon="arrow-right" mode="contained" onPress={() => {navigation.navigate('map-list', { requirements: requirements } )}}>Buscar</Button>
       </View>
     </View>
   )
