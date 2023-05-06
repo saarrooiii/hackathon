@@ -39,7 +39,7 @@ const Panel = (props) => {
     <View className="mx-auto w-full lg:max-w-7xl my-8 sm:my-24">
       <Text className="text-3xl font-semibold pb-4">¿Qué estás buscando?</Text>
       <View className="box-border p-4 sm:p-6 border border-gray-200 rounded-lg flex sm:flex-row sm:flex-wrap items-center justify-evenly">
-        <SelectableItem items={items} setItems={setItems} label="Salud" item="salud" />
+        <SelectableItem items={items} setItems={setItems} label="Alojamiento" item="alojamiento" />
         <SelectableItem items={items} setItems={setItems} label="Fiestas de pueblo" item="fiestas-de-pueblo" />
         <SelectableItem items={items} setItems={setItems} label="Eventos culturales" item="eventos-culturales" />
         <SelectableItem items={items} setItems={setItems} label="Gastronomía" item="gastronomia" />

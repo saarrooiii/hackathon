@@ -5,7 +5,7 @@ const NomadScreen = () => {
   return (
     <SearchingForScreenComponent 
       selected={[
-        'salud',
+        'alojamiento',
         'paisajes',
         'wifi',
       ]}
