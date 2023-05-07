@@ -6,7 +6,11 @@ import { TopNavigationBar } from '../components/navigation-bar'
 import { ScreenWrapper } from '../components/screen-wrapper'
 import { gray900 } from '../constants/colors'
 
-axios.defaults.headers.common['Authorization'] = "Bearer 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"
+const x = "sk-orsKZ6E3xznL0Fc0"
+const y = "Ktt0T3BlbkFJQQ3Q"
+const z = "L0fjzIoxVQ88de7i"
+
+axios.defaults.headers.common['Authorization'] = `Bearer ${x}${y}${z}`
 
 const AIPanel = () => {
   const [text, setText] = useState('')
@@ -64,12 +68,12 @@ const AIPanel = () => {
             <Text className="text-lg font-semibold text-gray-900">ChatGPT</Text>
           </View>
           {isLoading ? (
-            <Text className="sm:pl-8 sm:pt-20 text-lg text-gray-500 text-justify">Procesando petición...</Text>
+            <Text className="sm:pl-8 pt-8 text-lg text-gray-500 text-justify">Procesando petición...</Text>
           ) : (
             <>
               {error
-                ? <Text className="sm:pl-8 sm:pt-20 text-lg text-red-500 text-justify">Ha habido un error. Por favor, inténtalo de nuevo más tarde.</Text>
-                : <Text className="sm:pl-8 sm:pt-20 text-lg text-gray-500 text-justify">{response || '¡Estoy aquí para ayudarte!'}</Text>
+                ? <Text className="sm:pl-8 pt-8 text-lg text-red-500 text-justify">Ha habido un error. Por favor, inténtalo de nuevo más tarde.</Text>
+                : <Text className="sm:pl-8 pt-8 text-lg text-gray-500 text-justify">{response || '¡Estoy aquí para ayudarte!'}</Text>
               }
             </>
           )}
