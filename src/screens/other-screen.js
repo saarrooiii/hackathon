@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native'
 import axios from 'axios'
 import React, { useState } from 'react'
 import { View, Text, ScrollView, Image } from 'react-native'
@@ -13,6 +14,8 @@ const z = "L0fjzIoxVQ88de7i"
 axios.defaults.headers.common['Authorization'] = `Bearer ${x}${y}${z}`
 
 const AIPanel = () => {
+  const navigation = useNavigation()
+  
   const [text, setText] = useState('')
   const [response, setResponse] = useState('')
   const [isLoading, setIsLoading] = useState(false)
@@ -73,7 +76,14 @@ const AIPanel = () => {
             <>
               {error
                 ? <Text className="sm:pl-8 pt-8 text-lg text-red-500 text-justify">Ha habido un error. Por favor, inténtalo de nuevo más tarde.</Text>
-                : <Text className="sm:pl-8 pt-8 text-lg text-gray-500 text-justify">{response || '¡Estoy aquí para ayudarte!'}</Text>
+                : (
+                  <>
+                    <Text className="sm:pl-8 pt-8 text-lg text-gray-500 text-justify">{response || '¡Estoy aquí para ayudarte!'}</Text>
+                    <View className="pl-6 flex-row items-center justify-end pt-6">
+                      <Button className="rounded-full" labelStyle={{ fontWeight: 500, fontSize: 24 }} contentStyle={{ flexDirection: 'row-reverse', padding: '12px' }} icon="arrow-right" mode="contained" onPress={() => {navigation.navigate('map-list')}}>Siguiente</Button>
+                    </View>
+                  </>
+                )
               }
             </>
           )}
